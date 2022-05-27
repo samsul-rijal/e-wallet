@@ -1,5 +1,5 @@
 ## Demo
-### [https://e-wallet-zal.vercel.app/login](https://e-wallet-zal.vercel.app)
+### [https://e-wallet-zal.vercel.app](https://e-wallet-zal.vercel.app/login)
 
 ## Teknologi
 - ReactJs
