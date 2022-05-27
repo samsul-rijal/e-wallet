@@ -53,7 +53,7 @@ const Register = () => {
                                 Register berhasil
                             </div>
                             :
-                            registerError
+                            registerError ? registerError: ''
                         }
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
