@@ -1,5 +1,5 @@
-## Running Project
-### `npm start`
+## Demo
+### [https://e-wallet-zal.vercel.app/login](https://e-wallet-zal.vercel.app)
 
 ## Teknologi
 - ReactJs
@@ -23,3 +23,26 @@
 - react-avatar
 - dateformat
 - rupiah-format
+
+### Deploy
+- Heroku
+- Vercel
+
+## Screenshot
+### Register
+<img src="https://github.com/samsul-rijal/e-wallet/blob/screenshoot/Register.png" style="text-align : center;" > </img>
+
+### Login
+<img src="https://github.com/samsul-rijal/e-wallet/blob/screenshoot/Login.png" style="text-align : center;" > </img>
+
+### Profile
+<img src="https://github.com/samsul-rijal/e-wallet/blob/screenshoot/Profile.png" style="text-align : center;" > </img>
+
+### Topup
+<img src="https://github.com/samsul-rijal/e-wallet/blob/screenshoot/Topup.PNG" style="text-align : center;" > </img>
+
+### Transfer
+<img src="https://github.com/samsul-rijal/e-wallet/blob/screenshoot/Transfer.PNG" style="text-align : center;" > </img>
+
+### Laporan
+<img src="https://github.com/samsul-rijal/e-wallet/blob/screenshoot/Laporan.png" style="text-align : center;" > </img>
