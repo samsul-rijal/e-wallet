@@ -15,7 +15,7 @@ export const topupSaldo = (data) => {
 
         axios({
             method: 'PATCH',
-            url: 'http://localhost:8000/api/v1/wallet',
+            url: 'https://sr-wallet-api.herokuapp.com/api/v1/wallet',
             timemout: 120000,
             headers: {
                 Authorization: "Basic " + localStorage.token,

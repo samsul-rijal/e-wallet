@@ -19,7 +19,7 @@ export const registerUser = (data) => {
 
         axios({
             method: 'POST',
-            url: 'http://localhost:8000/api/v1/register',
+            url: 'https://sr-wallet-api.herokuapp.com/api/v1/register',
             timemout: 120000,
             data: data,
         }).then((response) => {
@@ -60,7 +60,7 @@ export const loginUser = (data) => {
 
         axios({
             method: 'POST',
-            url: 'http://localhost:8000/api/v1/login',
+            url: 'https://sr-wallet-api.herokuapp.com/api/v1/login',
             timemout: 120000,
             data: data,
         }).then((response) => {
@@ -94,7 +94,7 @@ export const checkUser = () => {
     return (dispatch) => {
         axios({
             method: 'GET',
-            url: 'http://localhost:8000/api/v1/check-auth',
+            url: 'https://sr-wallet-api.herokuapp.com/api/v1/check-auth',
             timeout: 120000,
             headers: {
                 Authorization: "Basic " + localStorage.token,
@@ -136,7 +136,7 @@ export const getUsers = () => {
         })
         axios({
             method: 'GET',
-            url: 'http://localhost:8000/api/v1/users',
+            url: 'https://sr-wallet-api.herokuapp.com/api/v1/users',
             timeout: 120000,
         }).then((response) => {
             dispatch({
