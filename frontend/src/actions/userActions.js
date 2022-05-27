@@ -39,9 +39,12 @@ export const registerUser = (data) => {
                 payload: {
                     loading: false,
                     data: false,
-                    errorMessage: error.response.data.error.message
+                    errorMessage: error.response.data.message
                 }
             })
+
+            console.log(error.response);
+
         })
     }
 }
