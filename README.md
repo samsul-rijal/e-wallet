@@ -28,21 +28,21 @@
 - Heroku
 - Vercel
 
-## Screenshot
+## screenshot
 ### Register
-<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshoot/Register.png" style="text-align : center;" > </img>
+<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshot/Register.png" style="text-align : center;" > </img>
 
 ### Login
-<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshoot/Login.png" style="text-align : center;" > </img>
+<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshot/Login.png" style="text-align : center;" > </img>
 
 ### Profile
-<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshoot/Profile.png" style="text-align : center;" > </img>
+<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshot/Profile.png" style="text-align : center;" > </img>
 
 ### Topup
-<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshoot/Topup.PNG" style="text-align : center;" > </img>
+<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshot/Topup.PNG" style="text-align : center;" > </img>
 
 ### Transfer
-<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshoot/Transfer.PNG" style="text-align : center;" > </img>
+<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshot/Transfer.PNG" style="text-align : center;" > </img>
 
 ### Laporan
-<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshoot/Laporan.png" style="text-align : center;" > </img>
+<img src="https://github.com/samsul-rijal/e-wallet/blob/master/screenshot/Laporan.png" style="text-align : center;" > </img>
