@@ -53,7 +53,10 @@ const Register = () => {
                                 Register berhasil
                             </div>
                             :
-                            registerError ? registerError: ''
+                            registerError ? 
+                            <div class="alert alert-danger" role="alert">
+                                {registerError}
+                            </div>: ''
                         }
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
