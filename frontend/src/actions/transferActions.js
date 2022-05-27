@@ -15,7 +15,7 @@ export const transferSaldo = (data) => {
 
         axios({
             method: 'POST',
-            url: 'http://localhost:8000/api/v1/transaction',
+            url: 'https://sr-wallet-api.herokuapp.com/api/v1/transaction',
             timemout: 120000,
             headers: {
                 Authorization: "Basic " + localStorage.token,
