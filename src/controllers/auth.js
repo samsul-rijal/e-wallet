@@ -8,7 +8,7 @@ exports.register = async (req, res) => {
     const schema = Joi.object({
         name: Joi.string().min(3).required(),
         email: Joi.string().email().min(6).required(),
-        password: Joi.string().min(6).required(),
+        password: Joi.string().min(1).required(),
     });
 
     const { error } = schema.validate(req.body);
@@ -65,7 +65,7 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
     const schema = Joi.object({
         email: Joi.string().email().min(6).required(),
-        password: Joi.string().min(6).required(),
+        password: Joi.string().min(1).required(),
     });
 
     const { error } = schema.validate(req.body);
