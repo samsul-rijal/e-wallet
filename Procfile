@@ -1,3 +1,3 @@
-release: node_modules/.bin/sequelize db:migrate:undo:all;
+release: node_modules/.bin/sequelize db:migrate;
 
 web: node index.js
