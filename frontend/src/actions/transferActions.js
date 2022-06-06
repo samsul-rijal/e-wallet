@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { baseURL } from '../config/BaseURL'
 
 export const TRANSFER_SALDO = 'TRANSFER_SALDO'
 
@@ -13,9 +14,9 @@ export const transferSaldo = (data) => {
             }
         })
 
-        axios({
+        baseURL({
             method: 'POST',
-            url: 'https://sr-wallet-api.herokuapp.com/api/v1/transaction',
+            url: '/transaction',
             timemout: 120000,
             headers: {
                 Authorization: "Basic " + localStorage.token,

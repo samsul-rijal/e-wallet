@@ -87,12 +87,19 @@ exports.login = async (req, res) => {
             },
         });
 
+        if(!userExist){
+            return res.status(400).send({
+                status:'failed',
+                message: 'Email belum terdaftar'
+            })
+        }
+
         const isValid = await bcrypt.compare(req.body.password, userExist.password);
 
         if (!isValid) {
             return res.status(400).send({
                 status: 'failed',
-                message: 'password not match',
+                message: 'password salah!',
             });
         }
 

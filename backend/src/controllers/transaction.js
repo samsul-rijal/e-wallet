@@ -15,8 +15,14 @@ exports.transaction = async (req, res) => {
             });
         }
 
+        const dataTransfer = await wallet.findOne({
+            where: {
+                userId: req.body.receiver
+            }
+        })
+
         const bodyData = {
-            saldo: dataWallet.saldo + parseInt(req.body.nominal)
+            saldo: dataTransfer.saldo + parseInt(req.body.nominal)
         }
 
         await wallet.update(bodyData, {
