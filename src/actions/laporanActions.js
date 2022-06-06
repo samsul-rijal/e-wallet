@@ -1,4 +1,6 @@
 import axios from 'axios'
+import { baseURL } from '../config/BaseURL'
+
 export const GET_TRANSACTIONS = 'GET_TRANSACTIONS'
 
 export const getTransactions = () => {
@@ -11,9 +13,9 @@ export const getTransactions = () => {
                 errorMessage: false
             }
         })
-        axios({
+        baseURL({
             method: 'GET',
-            url: 'https://sr-wallet-api.herokuapp.com/api/v1/transactions',
+            url: '/transactions',
             timeout: 120000,
             headers: {
                 Authorization: "Basic " + localStorage.token,
@@ -33,5 +35,7 @@ export const getTransactions = () => {
             }).catch((error) => {
                 console.log(error);
             })
+
+        // const response = baseURL.post('/transaction')
     }
 }

@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { baseURL } from '../config/BaseURL'
 
 export const TOPUP_SALDO = 'TOPUP_SALDO'
 
@@ -13,9 +14,9 @@ export const topupSaldo = (data) => {
             }
         })
 
-        axios({
+        baseURL({
             method: 'PATCH',
-            url: 'https://sr-wallet-api.herokuapp.com/api/v1/wallet',
+            url: '/wallet',
             timemout: 120000,
             headers: {
                 Authorization: "Basic " + localStorage.token,

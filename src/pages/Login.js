@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginUser } from '../actions/userActions'
+import { checkUser, loginUser } from '../actions/userActions'
 import { Button, Form } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
@@ -10,7 +10,7 @@ const Login = () => {
     const title = "Login"
     document.title = 'E-Wallet | ' + title
 
-    const { userLoading, userError } = useSelector((state) => state.UserReducer)
+    const { userLoading, isLogin, userError, userResult } = useSelector((state) => state.UserReducer)
     const dispatch = useDispatch()
     const [form, setForm] = useState({
         email: '',
@@ -34,12 +34,19 @@ const Login = () => {
             password: ''
         })
 
-        if(localStorage.token===undefined){
-            navigate('/login')
-        } else {
+        if(userResult){
             navigate('/profile')
+        } else {
+            navigate('/login')
         }
     }
+
+    useEffect(() => {
+        if (userResult) {
+            dispatch(checkUser())
+            navigate('/profile')
+        }
+    }, [userResult, dispatch])
 
     return (
         <div>
@@ -59,7 +66,6 @@ const Login = () => {
                     }
 
                     <div className='col-12 col-sm-12'>
-                        {userError ? userError : ''}
                         <Form onSubmit={handleSubmit} >
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label>Email</Form.Label>

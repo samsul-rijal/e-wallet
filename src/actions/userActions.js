@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+import { baseURL } from '../config/BaseURL'
+
 export const REGISTER_USER = 'REGISTER_USER'
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 export const USER_SUCCESS = 'USER_SUCCESS'
@@ -17,9 +19,9 @@ export const registerUser = (data) => {
             }
         })
 
-        axios({
+        baseURL({
             method: 'POST',
-            url: 'https://sr-wallet-api.herokuapp.com/api/v1/register',
+            url: '/register',
             timemout: 120000,
             data: data,
         }).then((response) => {
@@ -61,9 +63,9 @@ export const loginUser = (data) => {
             }
         })
 
-        axios({
+        baseURL({
             method: 'POST',
-            url: 'https://sr-wallet-api.herokuapp.com/api/v1/login',
+            url: '/login',
             timemout: 120000,
             data: data,
         }).then((response) => {
@@ -95,9 +97,9 @@ export const loginUser = (data) => {
 
 export const checkUser = () => {
     return (dispatch) => {
-        axios({
+        baseURL({
             method: 'GET',
-            url: 'https://sr-wallet-api.herokuapp.com/api/v1/check-auth',
+            url: '/check-auth',
             timeout: 120000,
             headers: {
                 Authorization: "Basic " + localStorage.token,
@@ -117,6 +119,7 @@ export const checkUser = () => {
             dispatch({
                 type: AUTH_ERROR,
                 payload: {
+                    isLogin: false,
                     loading: false,
                     data: false,
                     errorMessage: error.message
@@ -137,9 +140,9 @@ export const getUsers = () => {
                 errorMessage: false
             }
         })
-        axios({
+        baseURL({
             method: 'GET',
-            url: 'https://sr-wallet-api.herokuapp.com/api/v1/users',
+            url: '/users',
             timeout: 120000,
         }).then((response) => {
             dispatch({
