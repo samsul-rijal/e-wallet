@@ -54,9 +54,8 @@ const Profile = () => {
                             </div>
                         </div>
                         :
-                        <>
-                            {userLoading ? 'Loading . . .' : userError ? userError : 'Error'}
-                        </>
+        
+                        userLoading ? 'Loading . . .' : userError
                     }
                 </div>
             </div>

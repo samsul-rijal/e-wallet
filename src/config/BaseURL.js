@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const baseURL = axios.create({
-    baseURL: "https://sr-wallet-api.herokuapp.com/api/v1/"
+    baseURL: "http://localhost:8000/api/v1/"
 })
