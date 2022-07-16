@@ -56,6 +56,7 @@ exports.updateWallet = async (req, res) => {
         await transaction.create({
             nominal: req.body.saldo,
             sender: req.user.id,
+            receiver: req.user.id,
             type: 'Topup'
         });
 

@@ -77,10 +77,10 @@ exports.transaction = async (req, res) => {
 exports.transactions = async (req, res) => {
 
     try {
-        const data = await transaction.findAll({
-            where:{
-                sender: req.user.id
-            },
+        let dataTransactions = await transaction.findAll({
+            // where:{
+            //     sender: req.user.id
+            // },
             include: [
                 {
                     model: user,
@@ -102,9 +102,19 @@ exports.transactions = async (req, res) => {
             },
         })
 
+        // console.log(data);
+        const dataSender = dataTransactions.filter((item) => item.senderUser.id === req.user.id)
+        const dataReceiver = dataTransactions.filter((item) => item.receiverUser.id === req.user.id)
+
+        let data = dataSender.concat(dataReceiver)
+        data = [...new Map(data.map(item => [item['id'], item])).values()]
+
+        data.sort((a, b) => b.createdAt - a.createdAt)
+
         res.send({
             status: 'success',
             data
+            // dataTransactions
         })
 
     } catch (error) {
